@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;          /* make html and body 100% height */
+    margin: 0;             /* remove default margin */
+    padding: 0;   
+    background-color: #1b1b1b;         /* remove default padding */
+}
+
+.castle-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image:url(bgg.jpg), url('castlep.jpg');
+    background-size: auto 100%;  /* ✅ keep height fixed */
+    background-repeat: repeat-x; /* ✅ allow horizontal panning */
+    background-position: 0 0;
+    transition: background-position 0.1s ease-out;
+}
+
+
+.player {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+}
+
+.nakime {
+    width: 100%;
+    display: block;
+    transition: transform 0.1s;
+}
+
+.nakime.play-left {
+    transform: translate(-5px, -5px) rotate(-5deg);
+}
+
+.nakime.play-right {
+    transform: translate(5px, -5px) rotate(5deg);
+}
+
+.paw {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /* optional background color for testing */
+    /* background-color: rgba(255,0,0,0.2); */
+    transition: transform 0.1s;
+}
+
+.paw-left {
+    left: 50px;
+    bottom: 20px;
+}
+
+.paw-right {
+    right: 50px;
+    bottom: 20px;
+}
+
+.pressed {
+    transform: translateY(20px);
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: #c19e12;
+    color: #1b1b1b;
+    font-family: 'Montserrat',serif;
+    border: 2px solid #f1c40f;
+
+
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
+}
+
+button:active {
+    /* background-color: rgb(62, 14, 22); */
+     box-shadow: 0 0 10px #f1c40f;
+     transform: scale(0.97);
+    
+}
+button:hover{
+    color: #F1C40F; /* Text changes to gold */
+    background-color: transparent; /* Background becomes transparent */
+    border: 2px solid #F1C40F; /* Glowing border */
+    box-shadow: 0 0 10px #3f3406, 0 0 40px #a08a31, 0 0 60px #9d7f05e3;
+}
