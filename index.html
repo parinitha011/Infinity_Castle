@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dmsl-mini</title>
+    <title>Demon Slayer Mini</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-
-    
 </head>
 <body>
-    <h1 style="color: f1c40f;">Demon Slayer</h1>
-    <div class="castle-container">
-    <div class="player">
-        <img src="nakimeee.png" alt="nakime playing harp" class="nakime">
-        <div class="paw paw-left"></div>
-        <div class="paw paw-right"></div>
+    <h1 style="color: #f1c40f;">Demon Slayer</h1>
+
+    <div id="scene-container">
+        
+        <div class="castle-background"></div> 
+        <div class="wisteria-background"></div> 
+
+        <div id="player">
+            <img src="char2.png" alt="User" class="character">
+        </div>
+
+        <div class="castle-container"> 
+            <div class="player">
+                <img src="nakimeee.png" alt="nakime playing harp" class="nakime">
+                <div class="paw paw-left"></div>
+                <div class="paw paw-right"></div>
+            </div>
+            
+            <div class="button">
+                <button id="left-btn">Left</button>
+                <button id="right-btn">Right</button>
+            </div>
+            <div class="pressed"></div>
+        </div>
+        <div id="fireworks-display">
+    <img id="firework-gif" src="fworks.gif" alt="Firework animation" class="hidden">
+</div>
+
     </div>
-    
-    <div class="button">
-        <button id="left-btn">Left</button>
-        <button id="right-btn">Right</button>
-    </div>
-    <div class="pressed"></div>
-    </div>
+    <div class="curtain-panel curtain-left hidden"></div>
+    <div class="curtain-panel curtain-right hidden"></div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
