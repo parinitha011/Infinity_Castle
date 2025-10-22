@@ -1,10 +1,10 @@
-/* --- A. BASE STYLES & SCENE CONTAINERS --- */
+
 html, body {
     height: 100%; 
     margin: 0; 
     padding: 0; 
     background-color: #1b1b1b; 
-    /* The height/width of the canvas */
+
 }
 #scene-container {
     width: 100vw;
@@ -13,7 +13,7 @@ html, body {
     position: relative;
 }
 
-/* Layer 1: Backgrounds */
+
 .castle-background,
 .wisteria-background {
     position: absolute;
@@ -24,7 +24,7 @@ html, body {
     background-size: cover;
     background-position: center;
     transition: opacity 1s ease;
-    z-index: 1; /* Lowest layer */
+    z-index: 1; 
 }
 .castle-background {
     background-image: url('castlep.jpg');
@@ -34,7 +34,6 @@ html, body {
     opacity: 0;
 }
 
-/* Layer 2: Falling Character */
 #player {
     position: absolute;
     top: -150px; 
@@ -48,11 +47,8 @@ html, body {
     height: auto;
 }
 
-/* --- B. NAKIME UI CONTROLS (Restored and Centered) --- */
 
-/* Layer 3: Main Game UI Container (Holds Nakime and Buttons) */
 .castle-container {
-    /* Centering Fix: Absolute positioning in the middle of the viewport */
     position: absolute; 
     top: 50%;
     left: 50%;
@@ -61,20 +57,18 @@ html, body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /* Use bgg.jpg for the initial game background */
     background-image: url(bgg.jpg); 
     background-size: auto 100%; 
     background-repeat: repeat-x; 
     background-position: 0 0;
     transition: background-position 0.1s ease-out, opacity 1s ease; 
-    z-index: 20; /* Above the backgrounds */
+    z-index: 20; 
 }
 
-/* Nakime Image and Tilt (Restored) */
+
 .player {
     position: relative;
     width: 300px;
-    /* Use margin auto to center player horizontally within its container */
     margin: 50px auto; 
     transition: opacity 5s ease;
     z-index: 21;
@@ -96,7 +90,6 @@ html, body {
     transform: translate(5px, -5px) rotate(5deg);
 }
 
-/* Paw Visuals */
 .paw {
     position: absolute;
     width: 60px;
@@ -125,7 +118,6 @@ html, body {
     transition: opacity 1s ease;
 }
 
-/* Custom Button Styling (Restored Colors and Hover) */
 button {
     padding: 10px 20px;
     font-size: 18px;
